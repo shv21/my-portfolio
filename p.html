@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name · Web Developer</title>
+  <link rel="stylesheet" href="p.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== CURSOR ========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-bar"></div>
+      <span class="loader-text" id="loader-text">0%</span>
+    </div>
+  </div>
+
+  <!-- ========== CANVAS (WebGL/Particle BG) ========== -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <a href="#hero">YN<span class="dot">.</span></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" data-hover="About">About</a></li>
+      <li><a href="#skills" data-hover="Skills">Skills</a></li>
+      <li><a href="#projects" data-hover="Work">Work</a></li>
+      <li><a href="#contact" data-hover="Contact">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="nav-toggle">
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- ========== MOBILE MENU ========== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Work</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-tag reveal-up">Available for Work</div>
+      <h1 class="hero-title">
+        <span class="reveal-line">Crafting Digital</span>
+        <span class="reveal-line accent">Experiences</span>
+        <span class="reveal-line">That Matter</span>
+      </h1>
+      <p class="hero-sub reveal-up">
+        Full-Stack Web Developer · UI/UX Enthusiast · Open Source Contributor
+      </p>
+      <div class="hero-cta reveal-up">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MARQUEE ========== -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>HTML &amp; CSS</span>
+      <span class="sep">·</span>
+      <span>JavaScript</span>
+      <span class="sep">·</span>
+      <span>React</span>
+      <span class="sep">·</span>
+      <span>Node.js</span>
+      <span class="sep">·</span>
+      <span>MongoDB</span>
+      <span class="sep">·</span>
+      <span>REST APIs</span>
+      <span class="sep">·</span>
+      <span>Git &amp; GitHub</span>
+      <span class="sep">·</span>
+      <span>Responsive Design</span>
+      <span class="sep">·</span>
+      <span>Web Performance</span>
+      <span class="sep">·</span>
+      <!-- duplicate for seamless loop -->
+      <span>HTML &amp; CSS</span>
+      <span class="sep">·</span>
+      <span>JavaScript</span>
+      <span class="sep">·</span>
+      <span>React</span>
+      <span class="sep">·</span>
+      <span>Node.js</span>
+      <span class="sep">·</span>
+      <span>MongoDB</span>
+      <span class="sep">·</span>
+      <span>REST APIs</span>
+      <span class="sep">·</span>
+      <span>Git &amp; GitHub</span>
+      <span class="sep">·</span>
+      <span>Responsive Design</span>
+      <span class="sep">·</span>
+      <span>Web Performance</span>
+      <span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal-up">001 — About</div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="section-title reveal-up">
+            I build things<br />for the web.
+          </h2>
+          <div class="about-image-wrap reveal-up">
+            <div class="about-image-placeholder">
+              <div class="image-inner">
+                <span>YOUR</span>
+                <span>PHOTO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-right reveal-up">
+          <p class="about-bio">
+            Hi, I'm <strong>Your Name</strong> — a passionate web developer based in India.
+            I specialize in building fast, scalable, and visually stunning web experiences
+            that are both functional and beautiful.
+          </p>
+          <p class="about-bio">
+            With a deep understanding of modern frontend and backend technologies,
+            I bridge the gap between design and engineering — turning complex problems
+            into elegant digital solutions.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-target="3">0</span><span class="stat-unit">+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="25">0</span><span class="stat-unit">+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="10">0</span><span class="stat-unit">+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+          <a href="#" class="btn-outline" download>Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label reveal-up">002 — Skills</div>
+      <h2 class="section-title reveal-up">What I Work With</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal-up">
+          <div class="skill-icon">&#60;/&#62;</div>
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML5 &amp; CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>React.js</li>
+            <li>GSAP &amp; Animations</li>
+            <li>Tailwind CSS</li>
+          </ul>
+          <div class="skill-progress">
+            <div class="bar" data-w="92"><span>HTML/CSS</span><div class="fill"></div></div>
+            <div class="bar" data-w="85"><span>JavaScript</span><div class="fill"></div></div>
+            <div class="bar" data-w="78"><span>React</span><div class="fill"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up">
+          <div class="skill-icon">&#9113;</div>
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js &amp; Express</li>
+            <li>REST APIs</li>
+            <li>MongoDB</li>
+            <li>MySQL</li>
+            <li>Firebase</li>
+          </ul>
+          <div class="skill-progress">
+            <div class="bar" data-w="80"><span>Node.js</span><div class="fill"></div></div>
+            <div class="bar" data-w="75"><span>MongoDB</span><div class="fill"></div></div>
+            <div class="bar" data-w="70"><span>MySQL</span><div class="fill"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up">
+          <div class="skill-icon">&#9881;</div>
+          <h3>Tools &amp; More</h3>
+          <ul>
+            <li>Git &amp; GitHub</li>
+            <li>Docker (basics)</li>
+            <li>Figma</li>
+            <li>VS Code</li>
+            <li>Linux CLI</li>
+          </ul>
+          <div class="skill-progress">
+            <div class="bar" data-w="90"><span>Git</span><div class="fill"></div></div>
+            <div class="bar" data-w="70"><span>Figma</span><div class="fill"></div></div>
+            <div class="bar" data-w="65"><span>Docker</span><div class="fill"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label reveal-up">003 — Work</div>
+      <h2 class="section-title reveal-up">Selected Projects</h2>
+    </div>
+
+    <!-- Project 01 -->
+    <div class="project-item reveal-up" data-index="01">
+      <div class="project-inner">
+        <div class="project-info">
+          <span class="project-num">01</span>
+          <h3 class="project-title">E-Commerce Platform</h3>
+          <p class="project-desc">
+            A full-stack online store with cart, payments, auth, and admin dashboard.
+            Built with React, Node.js, MongoDB, and Stripe API.
+          </p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-arrow">Live Demo ↗</a>
+            <a href="#" class="link-arrow">GitHub ↗</a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="project-mockup p1">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-content">
+              <div class="mock-nav"></div>
+              <div class="mock-hero"></div>
+              <div class="mock-cards">
+                <div class="mock-card"></div>
+                <div class="mock-card"></div>
+                <div class="mock-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 02 -->
+    <div class="project-item reveal-up" data-index="02">
+      <div class="project-inner reverse">
+        <div class="project-info">
+          <span class="project-num">02</span>
+          <h3 class="project-title">Real-Time Chat App</h3>
+          <p class="project-desc">
+            Messaging app with rooms, real-time updates, user presence, and media sharing.
+            Powered by Socket.io and Firebase.
+          </p>
+          <div class="project-tags">
+            <span>React</span><span>Socket.io</span><span>Firebase</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-arrow">Live Demo ↗</a>
+            <a href="#" class="link-arrow">GitHub ↗</a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="project-mockup p2">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-content">
+              <div class="mock-chat">
+                <div class="chat-msg left"></div>
+                <div class="chat-msg right"></div>
+                <div class="chat-msg left"></div>
+                <div class="chat-msg right short"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 03 -->
+    <div class="project-item reveal-up" data-index="03">
+      <div class="project-inner">
+        <div class="project-info">
+          <span class="project-num">03</span>
+          <h3 class="project-title">Developer Portfolio</h3>
+          <p class="project-desc">
+            This very site — a fully custom animated portfolio with WebGL particles,
+            GSAP scroll animations, and zero frameworks.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GSAP</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-arrow">Live Demo ↗</a>
+            <a href="#" class="link-arrow">GitHub ↗</a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="project-mockup p3">
+            <div class="mock-bar"><span></span><span></span><span></span></div>
+            <div class="mock-content">
+              <div class="mock-port-hero"></div>
+              <div class="mock-port-grid">
+                <div></div><div></div><div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label reveal-up">004 — Contact</div>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h2 class="section-title reveal-up">Let's Build<br />Something <span class="accent">Great.</span></h2>
+          <p class="contact-sub reveal-up">
+            Have a project in mind? Want to collaborate? Or just want to say hi?
+            My inbox is always open.
+          </p>
+          <div class="contact-info reveal-up">
+            <div class="contact-item">
+              <span class="ci-label">Email</span>
+              <a href="mailto:you@email.com" class="ci-value">you@email.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="ci-label">Location</span>
+              <span class="ci-value">India</span>
+            </div>
+            <div class="contact-item">
+              <span class="ci-label">Status</span>
+              <span class="ci-value status-dot">Available for freelance</span>
+            </div>
+          </div>
+          <div class="social-links reveal-up">
+            <a href="#" class="social-link">GitHub</a>
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">Twitter</a>
+          </div>
+        </div>
+        <div class="contact-right reveal-up">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="john@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Project Inquiry" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <span>Send Message</span>
+              <div class="btn-arrow">→</div>
+            </button>
+            <div class="form-success" id="form-success">Message sent! I'll get back to you soon.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">YN<span class="dot">.</span></span>
+        <span class="footer-copy">© 2025 Your Name. Built with passion.</span>
+        <a href="#hero" class="footer-top">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="p.js"></script>
+
+</body>
+</html>

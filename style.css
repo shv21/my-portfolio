@@ -33,7 +33,6 @@ body {
   color: var(--white);
   font-family: var(--font-body);
   overflow-x: hidden;
-  cursor: none;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -47,37 +46,6 @@ strong { font-weight: 600; }
   inset: 0;
   z-index: 0;
   pointer-events: none;
-}
-
-/* ---- CUSTOM CURSOR ---- */
-.cursor {
-  width: 8px; height: 8px;
-  background: var(--accent);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background 0.2s;
-}
-
-.cursor-follower {
-  width: 36px; height: 36px;
-  border: 1px solid rgba(167,139,250,0.4);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: transform 0.12s var(--ease), width 0.3s, height 0.3s, border-color 0.3s;
-}
-
-body:has(a:hover) .cursor,
-body:has(button:hover) .cursor { width: 14px; height: 14px; }
-body:has(a:hover) .cursor-follower,
-body:has(button:hover) .cursor-follower {
-  width: 56px; height: 56px;
-  border-color: rgba(167,139,250,0.7);
 }
 
 /* ---- LOADER ---- */
@@ -858,7 +826,6 @@ a.ci-value:hover { color: var(--accent); }
   font-weight: 600;
   border: none;
   border-radius: 6px;
-  cursor: none;
   transition: background 0.3s, transform 0.2s;
   margin-top: 8px;
 }

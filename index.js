@@ -1,6 +1,6 @@
 /* =============================================
    PORTFOLIO SCRIPT — Inspired by Active Theory
-   Includes: WebGL Particles, GSAP, Cursor,
+    Includes: WebGL Particles, GSAP,
    Loader, Scroll Reveals, Counter, Skill Bars
    ============================================= */
 
@@ -168,30 +168,6 @@ if (gl) {
 
   initWebGL();
 }
-
-/* =============================================
-   3. CUSTOM CURSOR
-   ============================================= */
-const cursor         = document.getElementById('cursor');
-const cursorFollower = document.getElementById('cursor-follower');
-
-let cx = 0, cy = 0;
-let fx = 0, fy = 0;
-
-window.addEventListener('mousemove', e => {
-  cx = e.clientX;
-  cy = e.clientY;
-  cursor.style.left = cx + 'px';
-  cursor.style.top  = cy + 'px';
-});
-
-(function followCursor() {
-  fx += (cx - fx) * 0.12;
-  fy += (cy - fy) * 0.12;
-  cursorFollower.style.left = fx + 'px';
-  cursorFollower.style.top  = fy + 'px';
-  requestAnimationFrame(followCursor);
-})();
 
 /* =============================================
    4. NAV — Scrolled state & Mobile Menu
